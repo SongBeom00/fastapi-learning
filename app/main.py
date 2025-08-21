@@ -3,15 +3,11 @@ import uvicorn
 from fastapi import FastAPI
 
 
-def create_app():
+app = FastAPI()
 
-    app = FastAPI()
-
-
-
-    return app
-
-app = create_app()
+@app.get("/hello")
+async def hello():
+    return {"message": "Hello, World!"}
 
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000, log_level="info", reload=True)
