@@ -1,0 +1,8 @@
+.env.dev
+.env.prod
+fastapi_learning.iml
+pyproject.toml
+.venv
+.idea
+.env
+.dockervenv
